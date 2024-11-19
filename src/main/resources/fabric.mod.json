@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "terra-incognita-mod",
+	"version": "${version}",
+	"name": "Terra Incognita Mod",
+	"description": "A mod that adds items based on the Terra Incognita discord server.",
+	"authors": [
+		"Spencer Boggs"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/terra-incognita-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.spencerboggs.terraincognitamod.TerraIncognitaMod"
+		],
+		"client": [
+			"net.spencerboggs.terraincognitamod.TerraIncognitaModClient"
+		],
+		"fabric-datagen": [
+			"net.spencerboggs.terraincognitamod.TerraIncognitaModDataGenerator"
+		]
+	},
+	"mixins": [
+		"terra-incognita-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
